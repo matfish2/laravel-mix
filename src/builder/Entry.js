@@ -89,7 +89,8 @@ class Entry {
         let name = output
             .pathFromPublic(Config.publicPath)
             .replace(/\.js$/, '')
-            .replace(/\\/g, '/');
+            .replace(/\\/g, '/')
+            .replace(/^\//, '');
 
         this.base = path.parse(name).dir;
 
